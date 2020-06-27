@@ -76,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.alias
 
-
+GIT='/home/pi/config'
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
