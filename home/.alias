@@ -21,7 +21,7 @@ alias la='sudo ls -lAh --color=auto'
 # Mises à jour
 alias maj="apt update && apt list --upgradable"
 alias Maj="apt upgrade"
-alias majConf="~/config/tools/majConf.sh"
+alias majConf="sudo ~/config/tools/majConf.sh"
 
 # Logs
 alias syslog="tail -f /var/log/syslog"
