@@ -1,0 +1,29 @@
+# Permissions
+alias service="sudo service"
+alias tail="sudo tail"
+alias apt="sudo apt"
+alias systemctl="sudo systemctl"
+alias nano="sudo nano"
+
+# Services
+alias status="systemctl status"
+alias restart="systemctl restart"
+alias reload="systemctl reload"
+alias start="systemctl start"
+alias stop="systemctl stop"
+alias daemon-reload="systemctl daemon-reload"
+
+# Fichiers
+alias duf='sudo du -sh *'
+alias df='df -h'
+alias la='sudo ls -lAh --color=auto'
+
+# Mises à jour
+alias maj="apt update"
+alias Maj="apt upgrade"
+
+# Logs
+alias syslog="tail -f /var/log/syslog"
+
+# Homebridge
+alias hbRestart="service homebridge restart && syslog"
