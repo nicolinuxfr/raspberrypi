@@ -19,11 +19,13 @@ alias df='df -h'
 alias la='sudo ls -lAh --color=auto'
 
 # Mises à jour
-alias maj="apt update"
+alias maj="apt update && apt list --upgradable"
 alias Maj="apt upgrade"
+alias majConf="~/config/tools/majConf.sh"
 
 # Logs
 alias syslog="tail -f /var/log/syslog"
+alias logs="tail -f /var/log/caddy/access.log | jq"
 
 # Homebridge
 alias hbRestart="service homebridge restart && syslog"
