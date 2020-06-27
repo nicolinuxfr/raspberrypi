@@ -45,7 +45,7 @@ echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" \
 apt -y update
 apt -y install caddy jq
 
-cp -rf ~/config/etc/caddy/Caddyfile /etc/caddy/
+cp -rf $GIT/etc/caddy/Caddyfile /etc/caddy/
 chown caddy:caddy /etc/caddy/Caddyfile
 chmod 444 /etc/caddy/Caddyfile
 
@@ -62,9 +62,6 @@ npm install ghost-cli@latest -g
 
 cd /var/www/recettes/
 ghost install local
-
-
-
 
 echo "======== Redémarrage nécessaire ========"
 echo "Le Raspberry Pi doit être redémarré pour appliqué les changements."
