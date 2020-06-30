@@ -1,0 +1,14 @@
+[Unit]
+Description=Ghost systemd service for blog Recettes
+Documentation=https://ghost.org/docs/
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/recettes
+User=pi
+Environment="NODE_ENV=local"
+ExecStart=/usr/bin/ghost run
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
