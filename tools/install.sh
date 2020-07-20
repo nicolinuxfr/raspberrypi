@@ -63,5 +63,7 @@ npm install ghost-cli@latest -g
 cd /var/www/recettes/
 ghost install local
 
+systemctl enable $GIT/etc/systemd/ghost-recettes.service
+
 echo "======== Redémarrage nécessaire ========"
 echo "Le Raspberry Pi doit être redémarré pour appliqué les changements."
