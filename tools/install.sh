@@ -66,4 +66,4 @@ ghost install local
 systemctl enable $GIT/etc/systemd/ghost-recettes.service
 
 echo "======== Redémarrage nécessaire ========"
-echo "Le Raspberry Pi doit être redémarré pour appliqué les changements."
+echo "Le Raspberry Pi doit être redémarré pour appliquer les changements."
