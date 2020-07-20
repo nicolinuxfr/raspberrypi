@@ -65,5 +65,19 @@ ghost install local
 
 systemctl enable $GIT/etc/systemd/ghost-recettes.service
 
+echo "======== Installation de Pi-Hole et Unbound ========"
+
+curl -sSL https://install.pi-hole.net | bash
+
+
+cd /tmp
+wget -O root.hints https://www.internic.net/domain/named.root
+sudo mv root.hints /var/lib/unbound/
+
+ln -sf $GIT/etc/unbound/unbound.conf.d/pi-hole.conf /etc/unbound/unbound.conf.d/
+
+sudo service unbound start
+dig pi-hole.net @127.0.0.1 -p 5335
+
 echo "======== Redémarrage nécessaire ========"
 echo "Le Raspberry Pi doit être redémarré pour appliquer les changements."
