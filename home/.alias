@@ -29,3 +29,6 @@ alias logs="tail -f /var/log/caddy/access.log | jq"
 
 # Homebridge
 alias hbRestart="service homebridge restart && syslog"
+
+# AdGuard
+alias AdGuard="sudo AdGuardHome -s"
