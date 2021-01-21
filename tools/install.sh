@@ -24,6 +24,15 @@ sudo -u pi sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/too
 ln -s $GIT/home/.alias ~/.alias
 ln -sf $GIT/home/.zshrc ~/.zshrc
 
+# Installation de log2ram pour soulager la carte SD
+
+echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
+wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
+apt -y update
+apt -y install log2ram
+
+ln -sf $GIT/etc/log2ram.conf /etc/log2ram.conf
+
 echo "======== Installation de Homebridge ========"
 # setup repo
 curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
@@ -68,7 +77,6 @@ systemctl enable $GIT/etc/systemd/ghost-recettes.service
 echo "======== Installation de Pi-Hole et Unbound ========"
 
 curl -sSL https://install.pi-hole.net | bash
-
 
 cd /tmp
 wget -O root.hints https://www.internic.net/domain/named.root
